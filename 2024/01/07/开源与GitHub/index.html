@@ -1,0 +1,358 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>开源与GitHub | 数据科学</title><meta name="author" content="StaRainorigin"><meta name="copyright" content="StaRainorigin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="- 第一次讨论会——开源+GitHub+Git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开源与GitHub">
+<meta property="og:url" content="http://seadraw.github.io/2024/01/07/%E5%BC%80%E6%BA%90%E4%B8%8EGitHub/index.html">
+<meta property="og:site_name" content="数据科学">
+<meta property="og:description" content="- 第一次讨论会——开源+GitHub+Git">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://seadraw.github.io/img/avatar.jpg">
+<meta property="article:published_time" content="2024-01-07T06:10:22.000Z">
+<meta property="article:modified_time" content="2024-01-07T06:45:47.673Z">
+<meta property="article:author" content="StaRainorigin">
+<meta property="article:tag" content="-开源 -Git -Github">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://seadraw.github.io/img/avatar.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://seadraw.github.io/2024/01/07/%E5%BC%80%E6%BA%90%E4%B8%8EGitHub/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '开源与GitHub',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-01-07 14:45:47'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="数据科学"><span class="site-name">数据科学</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">开源与GitHub</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-07T06:10:22.000Z" title="发表于 2024-01-07 14:10:22">2024-01-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-07T06:45:47.673Z" title="更新于 2024-01-07 14:45:47">2024-01-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="开源与GitHub"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="第一次交流会"><a href="#第一次交流会" class="headerlink" title="第一次交流会"></a>第一次交流会</h1><h2 id="开源"><a href="#开源" class="headerlink" title="开源"></a>开源</h2><h3 id="何为开源？"><a href="#何为开源？" class="headerlink" title="何为开源？"></a>何为开源？</h3><p>最简单来说，就是<strong>公开源代码</strong></p>
+<p>意味着</p>
+<ul>
+<li>源码公开</li>
+<li>所有人拿去使用</li>
+<li>所有人都可以对其进行改进</li>
+<li>免费</li>
+<li>遵守一定的开源协议</li>
+<li>…</li>
+</ul>
+<p>常见的开源项目：</p>
+<ul>
+<li><p>系统级别：<a target="_blank" rel="noopener" href="https://github.com/torvalds/linux">torvalds&#x2F;linux: Linux kernel source tree (github.com)</a> </p>
+</li>
+<li><p>编程语言：<a target="_blank" rel="noopener" href="https://github.com/rust-lang/rust">rust-lang&#x2F;rust: Empowering everyone to build reliable and efficient software. (github.com)</a></p>
+</li>
+<li><p>框架：<a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-boot">spring-projects&#x2F;spring-boot: Spring Boot (github.com)</a></p>
+</li>
+<li><p>软件：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/PowerShell/PowerShell">PowerShell&#x2F;PowerShell: PowerShell for every system! (github.com)</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/obsproject/obs-studio">obsproject&#x2F;obs-studio: OBS Studio - Free and open source software for live streaming and screen recording (github.com)</a></li>
+</ul>
+</li>
+<li><p>大模型：<a target="_blank" rel="noopener" href="https://github.com/vivo-ai-lab/BlueLM">vivo-ai-lab&#x2F;BlueLM: BlueLM: Open large language models developed by vivo AI Lab (github.com)</a></p>
+</li>
+<li><p>游戏：mod <a target="_blank" rel="noopener" href="https://github.com/MinecraftForge/MinecraftForge">MinecraftForge&#x2F;MinecraftForge(github.com)</a></p>
+</li>
+</ul>
+<p>GitHub排行：<br><a target="_blank" rel="noopener" href="https://github.com/trending">https://github.com/trending</a></p>
+<p>但这并非是开源的全部，</p>
+<p>开源，更指的是一种精神——愿意把自己的智慧，劳动成功分享给其他人，是一种<strong>鼓励奉献</strong>的精神</p>
+<h3 id="何为闭源？"><a href="#何为闭源？" class="headerlink" title="何为闭源？"></a>何为闭源？</h3><p>最简单来说，就是不公开源代码</p>
+<p>意味着</p>
+<ul>
+<li>源码不公开</li>
+<li>往往伴随着商用（付费）</li>
+<li>…</li>
+</ul>
+<p>常见闭源项目：Windows、MacOS、MATLAB、一些商业软件等</p>
+<h3 id="开源能带来什么"><a href="#开源能带来什么" class="headerlink" title="开源能带来什么"></a>开源能带来什么</h3><p>联想到我们自己，开源到底怎么帮助我们的？</p>
+<ul>
+<li>免费软件，nginx, NodeJS, tomcat, docker, centos, ubuntu, MySQL, neo4j, eclipse, </li>
+<li>语言框架,   一些编程语言，python的各种库，Springboot, Hadoop,</li>
+<li>开源社区，GitHub, CSDN等, 稀土掘金, 某开发者社区等。</li>
+<li>镜像服务，开源软件镜像库，清华源</li>
+<li>其他很多</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.redhat.com/zh/topics/open-source/what-is-open-source">全面解析：什么是开源？开源的意义是什么？| 红帽 (redhat.com)</a></p>
+<ul>
+<li><strong>同行评审：</strong>由于源代码可自由访问，而且开源社区非常活跃，因此同行程序员会积极检查和改进开源代码。它就如同充满活力和生机的代码，而不是固步自封、停滞不前。</li>
+<li><strong>透明性：</strong>想要准确了解哪些类型的数据移动到哪里，或代码中发生了哪些类型的变化？开源允许您自行检查和跟踪，不必依赖供应商承诺。</li>
+<li><strong>可靠性：</strong>专有代码只靠单个作者或控制该代码的公司来更新、修复和保持正常工作。开源代码的存在时间可以超越其原作者，因为活跃的开源社区会不断进行更新。开放标准和同行评审可以确保开源代码经常得到适当的测试。</li>
+<li><strong>灵活性：</strong>由于开源代码注重修改，因此您可以使用它来解决您的业务或社区面临的独特问题。您不再只能用一种特定方式使用代码，您可以依托社区帮助和同行评审帮助您实施新解决方案。</li>
+<li><strong>更低成本：</strong>因为开源，所以代码本身是免费的，当您使用红帽等公司时，您只用为支持、安全强化和管理互操作性帮助等服务买单。</li>
+<li><strong>无供应商锁定：</strong>赋予用户自由，意味着您可以随时随地使用开源代码，用于任何目的。</li>
+<li><strong>开放式协作：</strong>活跃的开源社区，让您不再囿于方寸天地，而是能获得超越兴趣小组或者一个公司的帮助、资源和观点。</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/138651260">开源，软件领域人类最伟大的思想 - 知乎 (zhihu.com)</a></p>
+<h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1jg41197Zv?vd_source=6df2f60423608555adc65c0f2594130d">GitHub介绍：如何找公开的软件、项目、代码等 - 开源的意义和知识的突破 opensource</a></p>
+<h3 id="仓库相关"><a href="#仓库相关" class="headerlink" title="仓库相关"></a>仓库相关</h3><p>首先多少得会有点英文，起码水平要到会使用翻译软件。</p>
+<h4 id="搜索仓库"><a href="#搜索仓库" class="headerlink" title="搜索仓库"></a>搜索仓库</h4><ol>
+<li>搜索项目</li>
+<li>搜索代码</li>
+<li>搜索Issues，pr，Disscusion</li>
+<li>搜索用户</li>
+<li>…</li>
+</ol>
+<h4 id="仓库界面"><a href="#仓库界面" class="headerlink" title="仓库界面"></a>仓库界面</h4><h5 id="其他人的仓库"><a href="#其他人的仓库" class="headerlink" title="其他人的仓库"></a>其他人的仓库</h5><ol>
+<li><p>选项</p>
+<ul>
+<li>Code：代码</li>
+<li>Issues：提出问题，反馈bug，提出新特性</li>
+<li>Pull requests：推送请求</li>
+<li>Discussion：讨论</li>
+<li>Action：<a target="_blank" rel="noopener" href="https://docs.github.com/zh/actions">GitHub Actions 文档 - GitHub 文档</a></li>
+<li>其他（不常用）</li>
+</ul>
+</li>
+<li><p>信息</p>
+<ul>
+<li>项目名称</li>
+<li>About</li>
+<li>源码</li>
+<li>分支：一个仓库可以有多个分支</li>
+<li>贡献者</li>
+<li>代码信息：用哪种语言写的</li>
+<li>提交信息：最近一次提交的时间，贡献者，内容，源码中每一部分是谁写的</li>
+<li>README.md：项目说明</li>
+<li>其他</li>
+</ul>
+</li>
+<li><p>使用</p>
+<ul>
+<li>查看代码：之间点进去 或者 <code>Go to file</code></li>
+<li>下载相关附件，如软件安装包等：Releases</li>
+<li>收藏：<code>Starred</code></li>
+<li>下载：<ul>
+<li><code>&lt;&gt;Code -&gt; Https/SSH</code>, 使用 <code>git clone</code>, </li>
+<li>或 <code>&lt;&gt;Code -&gt; Download Zip</code> </li>
+<li>或 <code>Open with Visual Studio</code></li>
+</ul>
+</li>
+<li>编辑：<ul>
+<li><code>fork</code>，到自己的仓库，提交Pull requests</li>
+<li>如果有权限可以直接通过 git 提交</li>
+<li>使用Codespaces</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h5 id="自己的仓库"><a href="#自己的仓库" class="headerlink" title="自己的仓库"></a>自己的仓库</h5><ol>
+<li>能直接提交代码</li>
+<li>能接受别人的pr</li>
+<li>能创建和删除</li>
+<li>能增加仓库所有者</li>
+<li>能启用或关闭功能</li>
+<li>主要是Settings这块</li>
+</ol>
+<h3 id="账号相关"><a href="#账号相关" class="headerlink" title="账号相关"></a>账号相关</h3><h4 id="主页"><a href="#主页" class="headerlink" title="主页"></a>主页</h4><p>基本的信息，能DIY</p>
+<h4 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h4><p>仓库基本的管理，创建删除</p>
+<h4 id="组织"><a href="#组织" class="headerlink" title="组织"></a>组织</h4><p>能加入组织，创建组织</p>
+<h4 id="SSH-Keys"><a href="#SSH-Keys" class="headerlink" title="SSH Keys"></a>SSH Keys</h4><p>git与账号链接</p>
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><p>自己看</p>
+<h3 id="其他-1"><a href="#其他-1" class="headerlink" title="其他"></a>其他</h3><h4 id="仓库中的Actions"><a href="#仓库中的Actions" class="headerlink" title="仓库中的Actions"></a>仓库中的Actions</h4><h4 id="Github-Pages（演示）"><a href="#Github-Pages（演示）" class="headerlink" title="Github Pages（演示）"></a>Github Pages（演示）</h4><p>建立一个仓库名为 <code>[#your_GitHub_id].github.io</code> 的仓库，通过URL: <code>[#your_GitHub_id].github.io</code> 可以直接作为网页访问到 仓库中的 <code>index.html</code> 文件，也就是一个静态网页，通过这个功能可以搭建 博客，wiki，项目demo 等。</p>
+<h4 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h4><p>可以建立一个仓库，专门存放图片，实现图床的功能。</p>
+<p><img src="https://starain-1252568110.cos.ap-beijing.myqcloud.com/blog/EVDi5v1UYAANgW_.png" alt="EVDi5v1UYAANgW_"></p>
+<h4 id="内容创作，wiki搭建"><a href="#内容创作，wiki搭建" class="headerlink" title="内容创作，wiki搭建"></a>内容创作，wiki搭建</h4><p>由于markdown语法的文件可以直接展示格式化后的内容，故可以直接拿来作为发布文章的网站。</p>
+<h4 id="其他-2"><a href="#其他-2" class="headerlink" title="其他"></a>其他</h4><h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p><a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2">Git - Book (git-scm.com)</a></p>
+<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1s3411g7PS?vd_source=6df2f60423608555adc65c0f2594130d">git、github 保姆级教程入门，工作和协作必备技术，github提交pr - pull request</a></p>
+<p>具体操作建议看视频和文档，以及网上的帖子，肯定比我讲得好</p>
+<h3 id="下载与安装，配置"><a href="#下载与安装，配置" class="headerlink" title="下载与安装，配置"></a>下载与安装，配置</h3><p>下载 <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git - Downloads (git-scm.com)</a></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>都很重要，自己去学</p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/git/git-tutorial.html">Git 教程 | 菜鸟教程 (runoob.com)</a></p>
+<p><strong>感觉内容很多，愁学？</strong></p>
+<p>真正想用起来，先会最基本的功能就好，学一点就可以直接实践，至于原理，可以以后再看</p>
+<p>那么多命令，可以现用现查</p>
+<p>这些东西有点跟拼音一样，命令稍微有点零碎，你想实现某个功能，操作，需要一定的组合，不过常用的功能就那么几个，多用几次都涵盖了。</p>
+<p><strong>基本应用：</strong></p>
+<ul>
+<li>clone别人的仓库, 查看、使用别人的代码<ul>
+<li><code>git clone</code></li>
+<li><code>git clone -b &lt;分支名称&gt;</code></li>
+</ul>
+</li>
+<li>创建自己的仓库、提交代码<ul>
+<li><code>git init</code></li>
+<li><code>git add</code></li>
+<li><code>git commit</code></li>
+<li><code>git push</code></li>
+</ul>
+</li>
+<li>查看状态<ul>
+<li><code>git status</code></li>
+<li><code>git diff</code></li>
+<li><code>git log</code></li>
+<li><code>git blame &lt;file&gt;</code></li>
+</ul>
+</li>
+<li>链接远程仓库（clone的仓库会自动链接）<ul>
+<li><code>git remote</code></li>
+</ul>
+</li>
+<li>更新<ul>
+<li><code>git fetch</code></li>
+<li><code>git pull</code></li>
+</ul>
+</li>
+<li>fork 别人的仓库，提交 pr<ul>
+<li>首先在 GitHub 中 fork 一份到自己的仓库，现在自己的仓库有了一份同样的代码</li>
+<li>clone 自己的仓库到本地</li>
+<li>修改完进行提交</li>
+<li>在 GitHub 中提交 pr</li>
+</ul>
+</li>
+<li>回退版本，切换分支，合并代码<ul>
+<li><code>git reset</code></li>
+<li><code>git checkout</code></li>
+<li><code>git merge</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="其他-3"><a href="#其他-3" class="headerlink" title="其他"></a>其他</h3><ul>
+<li><p>光看视频是学不会的，必须要实际动手用起来，最最最基础的操作会一些就行了，简单学习一下就可以直接取用，然后遇到问题了可以再查。</p>
+</li>
+<li><p>几乎所有的 git 相关网站都会支持 用 git 来控制，如 Gitee，GitLab</p>
+</li>
+<li><p>大部分编译器自带支持git功能，且用图形界面简化了 git 的操作，如VsCode，JetBrains全家桶（idea，PyCharm等）</p>
+</li>
+<li><p>clone 的仓库会自动链接，所以其实创建仓库的操作建议从 GitHub 上创建仓库，然后再 clone 到本地。</p>
+</li>
+</ul>
+<h2 id="演示环节"><a href="#演示环节" class="headerlink" title="演示环节"></a>演示环节</h2><h2 id="我们如何使用？"><a href="#我们如何使用？" class="headerlink" title="我们如何使用？"></a>我们如何使用？</h2><ol>
+<li>浏览开源项目，下载使用，模仿学习</li>
+<li>记录自己的学习生活，通过提交的数据激励自己的学习</li>
+<li>同学间合作，开展学习活动，如大小项目的开发，实验，课程设计，挂载期末复习资料</li>
+<li>接触网上的项目，参与合作</li>
+<li>为开源项目做出自己的贡献</li>
+<li>在工作面试，考研复试中提出自己的贡献。</li>
+<li>…</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://SeaDraw.github.io">StaRainorigin</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://seadraw.github.io/2024/01/07/%E5%BC%80%E6%BA%90%E4%B8%8EGitHub/">http://seadraw.github.io/2024/01/07/%E5%BC%80%E6%BA%90%E4%B8%8EGitHub/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://SeaDraw.github.io" target="_blank">数据科学</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%BC%80%E6%BA%90-Git-Github/">-开源 -Git -Github</a></div><div class="post_share"><div class="social-share" data-image="/img/avatar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/01/07/blog%E6%90%AD%E5%BB%BA%EF%BC%88Day02%EF%BC%89/" title="blog搭建（Day02）"><img class="cover" src="/%5Cpost%5Ccover%5C1.1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">blog搭建（Day02）</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">StaRainorigin</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BA%A4%E6%B5%81%E4%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">第一次交流会</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E6%BA%90"><span class="toc-number">1.1.</span> <span class="toc-text">开源</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%95%E4%B8%BA%E5%BC%80%E6%BA%90%EF%BC%9F"><span class="toc-number">1.1.1.</span> <span class="toc-text">何为开源？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%95%E4%B8%BA%E9%97%AD%E6%BA%90%EF%BC%9F"><span class="toc-number">1.1.2.</span> <span class="toc-text">何为闭源？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E6%BA%90%E8%83%BD%E5%B8%A6%E6%9D%A5%E4%BB%80%E4%B9%88"><span class="toc-number">1.1.3.</span> <span class="toc-text">开源能带来什么</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub"><span class="toc-number">1.2.</span> <span class="toc-text">GitHub</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%93%E5%BA%93%E7%9B%B8%E5%85%B3"><span class="toc-number">1.2.1.</span> <span class="toc-text">仓库相关</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E4%BB%93%E5%BA%93"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">搜索仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%93%E5%BA%93%E7%95%8C%E9%9D%A2"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">仓库界面</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E4%BA%BA%E7%9A%84%E4%BB%93%E5%BA%93"><span class="toc-number">1.2.1.2.1.</span> <span class="toc-text">其他人的仓库</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BB%93%E5%BA%93"><span class="toc-number">1.2.1.2.2.</span> <span class="toc-text">自己的仓库</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%A6%E5%8F%B7%E7%9B%B8%E5%85%B3"><span class="toc-number">1.2.2.</span> <span class="toc-text">账号相关</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E9%A1%B5"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">主页</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%93%E5%BA%93"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%84%E7%BB%87"><span class="toc-number">1.2.2.3.</span> <span class="toc-text">组织</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SSH-Keys"><span class="toc-number">1.2.2.4.</span> <span class="toc-text">SSH Keys</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">1.2.2.5.</span> <span class="toc-text">其他</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96-1"><span class="toc-number">1.2.3.</span> <span class="toc-text">其他</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%93%E5%BA%93%E4%B8%AD%E7%9A%84Actions"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">仓库中的Actions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Github-Pages%EF%BC%88%E6%BC%94%E7%A4%BA%EF%BC%89"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">Github Pages（演示）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%BE%E5%BA%8A"><span class="toc-number">1.2.3.3.</span> <span class="toc-text">图床</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C%EF%BC%8Cwiki%E6%90%AD%E5%BB%BA"><span class="toc-number">1.2.3.4.</span> <span class="toc-text">内容创作，wiki搭建</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B6%E4%BB%96-2"><span class="toc-number">1.2.3.5.</span> <span class="toc-text">其他</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git"><span class="toc-number">1.3.</span> <span class="toc-text">git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%86%E9%A2%91"><span class="toc-number">1.3.1.</span> <span class="toc-text">视频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85%EF%BC%8C%E9%85%8D%E7%BD%AE"><span class="toc-number">1.3.2.</span> <span class="toc-text">下载与安装，配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">1.3.3.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96-3"><span class="toc-number">1.3.4.</span> <span class="toc-text">其他</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%94%E7%A4%BA%E7%8E%AF%E8%8A%82"><span class="toc-number">1.4.</span> <span class="toc-text">演示环节</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E4%BB%AC%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%EF%BC%9F"><span class="toc-number">1.5.</span> <span class="toc-text">我们如何使用？</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/07/%E5%BC%80%E6%BA%90%E4%B8%8EGitHub/" title="开源与GitHub">开源与GitHub</a><time datetime="2024-01-07T06:10:22.000Z" title="发表于 2024-01-07 14:10:22">2024-01-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/07/blog%E6%90%AD%E5%BB%BA%EF%BC%88Day02%EF%BC%89/" title="blog搭建（Day02）"><img src="/%5Cpost%5Ccover%5C1.1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="blog搭建（Day02）"/></a><div class="content"><a class="title" href="/2024/01/07/blog%E6%90%AD%E5%BB%BA%EF%BC%88Day02%EF%BC%89/" title="blog搭建（Day02）">blog搭建（Day02）</a><time datetime="2024-01-07T05:59:24.000Z" title="发表于 2024-01-07 13:59:24">2024-01-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/07/blog%E6%90%AD%E5%BB%BA%EF%BC%88Day01%EF%BC%89/" title="blog搭建（Day01）"><img src="https://starain-1252568110.cos.ap-beijing.myqcloud.com/blog/104436080_p3.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="blog搭建（Day01）"/></a><div class="content"><a class="title" href="/2024/01/07/blog%E6%90%AD%E5%BB%BA%EF%BC%88Day01%EF%BC%89/" title="blog搭建（Day01）">blog搭建（Day01）</a><time datetime="2024-01-07T05:59:00.000Z" title="发表于 2024-01-07 13:59:00">2024-01-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/05/hello-world/" title="Hello World">Hello World</a><time datetime="2024-01-05T07:28:42.972Z" title="发表于 2024-01-05 15:28:42">2024-01-05</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By StaRainorigin</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
